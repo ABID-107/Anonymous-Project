@@ -1,3 +1,9 @@
+// data of navbar
+
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+
+// **
 const navBars = [
     {
         id: 1,
@@ -31,19 +37,43 @@ const navBars = [
     }
 ];
 
+// **
 const Navbar = () => {
+    const [open, setOpen] = useState(false)
+    const navbar = navBars.map(n => <li key={n.id}
+        className="text-xl font-semibold text-[#FFF0C4] rounded-2xl shadow-xl/50 border-1 border-[#3E0703] p-3">
+        <a href={n.path}></a> {n.name}</li>)
     return (
         <nav>
             <div className=" bg-[#660B05] p-2 mx-5 rounded-xl mt-2 justify-between flex items-center">
-                <h1 className=" bg-[#3E0703] font-bold text-2xl text-[#FFF0C4] rounded-tl-lg rounded-br-lg shadow-xl/50 mx-5 p-3">My Navbar</h1>
-                <ul className="flex justify-center gap-10">
-                    {
-                        navBars.map(n => <li key={n.id}
-                            className="text-xl font-semibold text-[#FFF0C4] rounded-2xl shadow-xl/50 border-1 border-[#3E0703] p-3">
-                            <a href={n.path}></a> {n.name}</li>)
-                    }
-                </ul>
-                <button className="text-xl font-semibold text-[#FFF0C4] rounded-2xl shadow-xl/50 border-1 border-[#3E0703] p-3">Click Me</button>
+                {/* logo */}
+                <div>
+                    <h1 className=" bg-[#3E0703] font-bold text-2xl text-[#FFF0C4] rounded-tl-lg rounded-br-lg shadow-xl/50 mx-5 p-3">My Navbar</h1>
+                </div>
+                {/* navbar items */}
+                <div>
+                    <ul className="md:flex md:justify-center md:gap-10 hidden">
+                        {
+                            navbar
+                        }
+                    </ul>
+                </div>
+                {/* info button */}
+                <div className="flex items-center gap-5">
+                    {/* menu */}
+                    <div onClick={() => setOpen(!open)}>
+                        {open ? <X className="md:hidden"></X> : <Menu color="white" className="md:hidden"></Menu>}
+                        <div className="md:hidden">
+                            <ul>
+                                {
+                                    navbar
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    {/* menu */}
+                    <button className="text-xl font-semibold text-[#FFF0C4] rounded-2xl shadow-xl/50 border-1 border-[#3E0703] p-3">Click Me</button>
+                </div>
             </div>
         </nav>
     );
