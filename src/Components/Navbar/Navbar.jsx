@@ -48,7 +48,7 @@ const Navbar = () => {
             <div className=" bg-[#660B05] p-2 mx-5 rounded-xl mt-2 justify-between flex items-center">
                 {/* logo */}
                 <div>
-                    <h1 className=" bg-[#3E0703] font-bold text-2xl text-[#FFF0C4] rounded-tl-lg rounded-br-lg shadow-xl/50 mx-5 p-3">My Navbar</h1>
+                    <h1 className=" bg-[#3E0703] font-bold text-2xl text-[#FFF0C4] rounded-tl-full rounded-br-full shadow-xl/50 mx-5 p-3">My Navbar</h1>
                 </div>
                 {/* navbar items */}
                 <div>
@@ -64,7 +64,9 @@ const Navbar = () => {
                     <div onClick={() => setOpen(!open)}>
                         {open ? <X className="md:hidden"></X> : <Menu color="white" className="md:hidden"></Menu>}
                         <div className="md:hidden">
-                            <ul>
+                            <ul className={`
+                                bg-none 
+                                absolute duration-1000 ${open ? 'top-20 right-44' : '-top-80 right-44'}`}>
                                 {
                                     navbar
                                 }
