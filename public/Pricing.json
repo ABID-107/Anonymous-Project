@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "planName": "Basic",
+        "price": "20 $/month",
+        "description": "A starter plan for beginners who want access to essential gym equipment and facilities.",
+        "features": [
+            "Access to cardio equipment",
+            "Access to weightlifting area",
+            "Locker room access",
+            "Free water station"
+        ]
+    },
+    {
+        "id": 3,
+        "planName": "Premium",
+        "price": "60 $/month",
+        "description": "An advanced plan for fitness enthusiasts who want full access to all classes and wellness services.",
+        "features": [
+            "All Standard features",
+            "Unlimited group fitness classes",
+            "Sauna & steam room access",
+            "Nutritional guidance"
+        ]
+    },
+    {
+        "id": 2,
+        "planName": "Standard",
+        "price": "40 $/month",
+        "description": "A popular plan that includes group classes and basic personal training support.",
+        "features": [
+            "All Basic features",
+            "Access to group fitness classes",
+            "One free personal training session",
+            "Free Wi-Fi"
+        ]
+    }
+]

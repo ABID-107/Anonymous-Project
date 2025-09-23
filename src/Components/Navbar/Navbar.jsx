@@ -41,7 +41,10 @@ const navBars = [
 const Navbar = () => {
     const [open, setOpen] = useState(false)
     const navbar = navBars.map(n => <li key={n.id}
-        className="text-xl font-semibold text-[#FFF0C4] rounded-2xl shadow-xl/50 border-1 border-[#3E0703] p-3">
+        className="text-xl font-semibold text-[#FFF0C4] 
+        rounded-2xl shadow-xl/50 
+        border-1 border-[#3E0703] p-3
+        transform transition duration-300 ease-in-out hover:scale-110">
         <a href={n.path}></a> {n.name}</li>)
     return (
         <nav>
