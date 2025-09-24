@@ -9,7 +9,7 @@ const Pricing = ({ pricingPromise }) => {
                 <h1 className="text-5xl font-bold text-center">
                     Get Our Plan
                 </h1>
-                <div className="flex justify-center">
+                <div className="grid justify-center lg:flex lg:justify-center md:grid-cols-2">
                     {
                         showPricing.map(prices => <PricingCard key={prices.id} prices={prices}></PricingCard>)
                     }

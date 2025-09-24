@@ -1,6 +1,7 @@
 import { Suspense } from "react"
 import Navbar from "./Components/Navbar/Navbar"
 import Pricing from "./Components/PricingOption/Pricing"
+import ResultsChart from "./Components/ResultsData/ResultsChart"
 
 const pricingPromise = fetch('./../public/Pricing.json').then(res => res.json())
 
@@ -21,7 +22,7 @@ function App() {
           <Pricing pricingPromise={pricingPromise}></Pricing>
         </Suspense>
 
-
+        <ResultsChart></ResultsChart>
       </main>
     </>
   )

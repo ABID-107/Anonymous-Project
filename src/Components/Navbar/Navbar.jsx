@@ -69,7 +69,7 @@ const Navbar = () => {
                         <div className="md:hidden">
                             <ul className={`
                                 bg-none 
-                                absolute duration-1000 ${open ? 'top-20 right-44' : '-top-80 right-44'}`}>
+                                absolute duration-1000 ${open ? 'top-20' : '-top-80'}`}>
                                 {
                                     navbar
                                 }
